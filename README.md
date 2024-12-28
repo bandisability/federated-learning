@@ -1,5 +1,34 @@
 ## Enhancements
 
+### Key Improvements
+1. **Training Visualization**:
+   - Integrated TensorBoard for monitoring:
+     - Training loss for each epoch.
+     - Model accuracy during testing.
+   - To view TensorBoard logs:
+     ```bash
+     tensorboard --logdir=./logs
+     ```
+
+2. **Code Optimization**:
+   - Modularized training and testing functions for better code readability and maintainability.
+   - Enhanced logging for detailed epoch-wise insights.
+
+3. **Dataset Support**:
+   - Extended support for both MNIST and CIFAR-10 datasets with configurable preprocessing and loaders.
+
+4. **Performance Monitoring**:
+   - Automatic saving of training loss in TensorBoard for post-experiment analysis.
+   - Detailed console outputs for training and testing phases.
+
+### How to Run
+```bash
+python main_nn.py --dataset mnist --model cnn --epochs 10 --lr 0.01 --gpu 0
+
+
+
+## Enhancements
+
 ### Visualization Features
 1. **Integrated TensorBoard**:
    - Real-time tracking of training loss, test accuracy, and client selection distribution for each round.
