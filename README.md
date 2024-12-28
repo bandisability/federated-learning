@@ -1,3 +1,40 @@
+## Enhancements
+
+### Visualization Features
+1. **Integrated TensorBoard**:
+   - Real-time tracking of training loss, test accuracy, and client selection distribution for each round.
+   - Easily monitor training progress by running:
+     ```bash
+     tensorboard --logdir=./logs
+     ```
+   - Provides a detailed, interactive view of training metrics.
+
+2. **Performance Comparison**:
+   - Automatically saves experiment results, including accuracy and loss, in a CSV file located at `./results/experiment_results.csv`.
+   - Generates comparison plots for:
+     - **Accuracy Comparison**: Saved as `./save/performance_comparison_accuracy.png`.
+     - **Loss Comparison**: Saved as `./save/performance_comparison_loss.png`.
+
+3. **Data Distribution Visualization**:
+   - Visualizes the distribution of data samples across clients.
+     - Example output: `./save/client_data_distribution.png`.
+   - For MNIST, displays class distribution for a specific client.
+     - Example output: `./save/class_distribution_client0.png`.
+
+### Logging Enhancements
+- Logs selected clients and average loss for each training round to both TensorBoard and the console.
+- Console output provides real-time feedback on training progress, ensuring a smooth debugging experience.
+
+## How to Run
+To run the updated `main_fed.py` with enhanced features, use the following command:
+```bash
+python main_fed.py --dataset mnist --iid --num_channels 1 --model cnn --epochs 50 --gpu 0
+
+
+
+
+
+
 # Federated Learning [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.4321561.svg)](https://doi.org/10.5281/zenodo.4321561)
 
 This is partly the reproduction of the paper of [Communication-Efficient Learning of Deep Networks from Decentralized Data](https://arxiv.org/abs/1602.05629)   
